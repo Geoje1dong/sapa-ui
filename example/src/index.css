@@ -3,3 +3,43 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.section{
+  padding:40px 24px;
+  display:flex;
+  background:#fafafa;
+  justify-content:center;
+  margin-bottom:40px;
+}
+
+.section > button{
+  margin:0 12px;
+}
+
+.ripple-effect-box{
+  position:absolute;
+  background: rgba(0,0,0,.15);
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  pointer-events: none;
+}
+.ripple-effect-box.show{
+  animation: ripple .75s ease-out;
+  -webkit-animation: ripple .75s ease-out;
+}
+
+@-webkit-keyframes ripple {
+  to {
+      -webkit-transform: scale(2);
+      transform: scale(2);
+      opacity: 0;
+  }
+}
+@keyframes ripple {
+  to {
+      -webkit-transform: scale(2);
+      transform: scale(2);
+      opacity: 0;
+  }
+}
