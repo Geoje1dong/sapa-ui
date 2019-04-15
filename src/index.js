@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import styles from './styles.css'
+import Button from './button'
 
-export default class ExampleComponent extends Component {
+class ExampleComponent extends Component {
   static propTypes = {
     text: PropTypes.string
   }
@@ -19,4 +20,9 @@ export default class ExampleComponent extends Component {
       </div>
     )
   }
+}
+
+module.exports = {
+  ExampleComponent,
+  Button
 }

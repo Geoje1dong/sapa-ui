@@ -26,6 +26,10 @@ class Example extends Component {
 }
 ```
 
+## Contributors
+
+[MoonG25](https://github.com/MoonG25)
+
 ## License
 
 MIT © [Geoje1dong](https://github.com/Geoje1dong)
