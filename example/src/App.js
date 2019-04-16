@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {ExampleComponent,Button} from 'sapa-ui/dist/index'
+import 'reset-css';
 
 export default class App extends Component {
   render () {

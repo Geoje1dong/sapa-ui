@@ -2,15 +2,15 @@ import React from 'react'
 
 const colors = {
   primary: {
-    color: '#fff',
+    color: '#3F51B5',
     backgroundColor: '#3F51B5'
   },
   secondary: {
-    color: '#fff',
+    color: '#FF5722',
     backgroundColor: '#FF5722'
   },
   danger: {
-    color: '#fff',
+    color: '#F44336',
     backgroundColor: '#F44336'
   }
 }
@@ -30,7 +30,7 @@ const styles = {
   },
 
   textBtn: {
-    backgroundColor: 'none !important'
+    backgroundColor: 'transparent'
   }
 }
 
@@ -39,6 +39,7 @@ class Button extends React.Component {
     super(props)
   }
 
+  //ripple 이펙트 추가
   _rippleBtn = (e) => {
     const $target = e.target;            
     const rect = $target.getBoundingClientRect();
@@ -52,11 +53,6 @@ class Button extends React.Component {
     $rippleEffect.classList.remove('show');    // show class 제거
     let top = e.pageY - rect.top - $rippleEffect.offsetHeight/2 - window.scrollY;
     let left = e.pageX - rect.left - $rippleEffect.offsetWidth/2 - document.body.scrollLeft;
-    console.log(e.pageY);
-    console.log(rect.top);
-    console.log($rippleEffect.offsetHeight);
-    console.log(document.body.scrollLeft);
-
     $rippleEffect.style.top = top + 'px';
     $rippleEffect.style.left = left + 'px';
     $rippleEffect.classList.add('show');    // show class 추가
@@ -77,14 +73,22 @@ class Button extends React.Component {
       position: 'relative',
       overflow:'hidden',
       outline:'none',
-
       //backgroundColor: `${currColor ? currColor : '#FAFAFA'}`,
       //color: `${currColor ? currColor : '#9E9E9E'}`,
       cursor: 'pointer',
-      ...currColor
+      ...currColor,
+      
     }
     if (type === 'one') {
       style.borderRadius = '7px'
+    }
+    if (styles === 'default'){
+      style.color = '#fff'
+    }
+    if (styles === 'textBtn') {
+      style.backgroundColor = 'transparent',
+      style.border = '0',
+      style.boxShadow = '0'      
     }
     return (
       <button style={style} onClick={this._rippleBtn}>{text}</button>
