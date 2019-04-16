@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import styles from './styles.css'
 import Button from './button'
+import Card from './card'
 
 class ExampleComponent extends Component {
   static propTypes = {
@@ -24,5 +25,6 @@ class ExampleComponent extends Component {
 
 module.exports = {
   ExampleComponent,
-  Button
+  Button,
+  Card
 }

@@ -1,0 +1,37 @@
+.cardContainer {
+  display: flex;
+  width: 360px;
+  height: 360px;
+  background-color: #fff;
+  box-shadow: 0 8px 20px 0 rgba(0,0,0,.1);
+  border-radius: 6px;
+  margin: 1em;
+  flex-direction: column;
+}
+
+.cardHeader {
+  height: 240px;
+  background: url(https://image.freepik.com/free-vector/abstract-dynamic-pattern-wallpaper-vector_53876-59131.jpg);
+  background-size: cover;
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+}
+
+.cardContent {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* media query */
+@media (min-width: 1000px) {
+  .cardContainer {
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s,-webkit-transform .3s;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
