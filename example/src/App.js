@@ -1,13 +1,33 @@
 import React, { Component } from 'react'
-import {ExampleComponent,Button} from 'sapa-ui/dist/index'
+import { ExampleComponent, Button, Card} from 'sapa-ui/dist/index'
 import 'reset-css';
+
+const ulContainer = {
+  backgroundColor: '#eee',
+  padding: '15px 100px',
+  color: '#123456'
+}
+
+const liContainer = {
+  margin: '1em'
+}
+
+const h1Style = {
+  fontSize: '32px',
+  margin: '1em'
+}
+
+const cardContainerStyle = {
+  display: 'flex',
+  flexWrap: 'wrap'
+}
 
 export default class App extends Component {
   render () {
     return (
-      <ul>
-        <li>
-          <h1>Buttons</h1>
+      <ul style={ulContainer}>
+        <li style={liContainer}>
+          <h1 style={h1Style}>Buttons</h1>
           <div className="section">
             <Button effect="ripple" styles="default" text='Button Default' />
             <Button effect="ripple" styles="default" color="primary" text='Button Primary' />
@@ -22,23 +42,23 @@ export default class App extends Component {
             <Button styles="textBtn" color="danger" text='Button Danger' />
             <Button  styles="textBtn" text='Button Disabled'/>
           </div>
-          <ul>
-            <li></li>
-
-            <li><Button type="nemo" color="green" text='Green Button Nemo' /></li>
-            <li><Button type="nemo" color="blue" text='Blue Button Nemo' /></li>
-            <li><Button type="one" color="red" text='Red Button One' /></li>
-            <li><Button type="one" color="green" text='Green Button One' /></li>
-            <li><Button type="one" color="blue" text='Blue Button One' /></li>
-          </ul>
+          <div className="section">
+            <Button type="nemo" color="green" text='Green Button Nemo' />
+            <Button type="nemo" color="blue" text='Blue Button Nemo' />
+            <Button type="one" color="red" text='Red Button One' />
+            <Button type="one" color="green" text='Green Button One' />
+            <Button type="one" color="blue" text='Blue Button One' />
+          </div>
         </li>
-        <li>
-          <h1>Headings</h1>
-          <ul>
-            <li><ExampleComponent text='Modern React component module' /></li>
-            <li><ExampleComponent text='Modern React component module' /></li>
-            <li><ExampleComponent text='Modern React component module' /></li>
-          </ul>
+        <li style={liContainer}>
+          <h1 style={h1Style}>Card</h1>
+          <div style={cardContainerStyle}>
+            {
+              [1,2,3,4,5,6,7,8,9].map(data => {
+                return <Card />
+              })
+            }
+          </div>
         </li>
       </ul>
     )
