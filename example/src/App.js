@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ExampleComponent, Button, Card} from 'sapa-ui/dist/index'
+import { ExampleComponent, Button, Card, StyledComponent } from 'sapa-ui/dist/index'
 import 'reset-css';
 
 const ulContainer = {
@@ -59,6 +59,10 @@ export default class App extends Component {
               })
             }
           </div>
+        </li>
+        <li style={liContainer}>
+          <h1 style={h1Style}>Styled Component Example</h1>
+          <StyledComponent/>
         </li>
       </ul>
     )
