@@ -3,15 +3,18 @@ import React from 'react'
 const colors = {
   primary: {
     color: '#3F51B5',
-    backgroundColor: '#3F51B5'
+    backgroundColor: '#3F51B5',
+    borderColor: '#3F51B5'
   },
   secondary: {
     color: '#FF5722',
-    backgroundColor: '#FF5722'
+    backgroundColor: '#FF5722',
+    borderColor: '#FF5722'
   },
   danger: {
     color: '#F44336',
-    backgroundColor: '#F44336'
+    backgroundColor: '#F44336',
+    borderColor: '#F44336'
   }
 }
 
@@ -61,10 +64,8 @@ class Button extends React.Component {
   render() {
     const { type, text, color, styles } = this.props
     const currColor = colors[color]
-    console.log(currColor)
     const style = {
-      border: `1px solid ${currColor ? currColor : 'black'}`,
-      border:'rgba(0, 0, 0, 0.87)',
+      border:'1px solid',
       boxShadow:'0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12)',
       padding: '16px 24px',
       fontSize: '14px',
@@ -83,15 +84,22 @@ class Button extends React.Component {
       style.borderRadius = '7px'
     }
     if (styles === 'default'){
-      style.color = '#fff'
+      if(color === 'primary' || color === 'secondary' || color === 'danger'){
+        style.color = '#fff'
+      }else{
+        style.borderColor = '#f5f5f5'
+      }
     }
-    if (styles === 'textBtn') {
+    else if (styles === 'textBtn') {
       style.backgroundColor = 'transparent',
       style.border = '0',
-      style.boxShadow = '0'      
+      style.boxShadow = '0'
+    }else if (styles === 'outlineBtn'){
+      style.backgroundColor = 'transparent',
+      style.boxShadow = '0'
     }
     return (
-      <button style={style} onClick={this._rippleBtn}>{text}</button>
+      <button className={color} style={style} onClick={this._rippleBtn}>{text}</button>
     )
   }
 }

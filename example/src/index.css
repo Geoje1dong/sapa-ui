@@ -29,6 +29,17 @@ body {
   -webkit-animation: ripple .75s ease-out;
 }
 
+.primary > .ripple-effect-box{
+    background:rgba(63, 81, 181, 0.5);
+}
+
+.secondary > .ripple-effect-box{
+      background:rgb(255, 87, 34, 0.5)
+}
+.danger > .ripple-effect-box{
+  background:rgba(244, 67, 54,0.5)
+}
+
 @-webkit-keyframes ripple {
   to {
       -webkit-transform: scale(2);

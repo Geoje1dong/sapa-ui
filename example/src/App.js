@@ -43,12 +43,20 @@ export default class App extends Component {
             <Button  styles="textBtn" text='Button Disabled'/>
           </div>
           <div className="section">
+            <Button styles="outlineBtn" text='Button Default' />
+            <Button styles="outlineBtn" color="primary" text='Button Primary' />
+            <Button styles="outlineBtn" color="secondary" text='Button Secondary' />
+            <Button styles="outlineBtn" color="danger" text='Button Danger' />
+            <Button  styles="outlineBtn" text='Button Disabled'/>
+          </div>
+          <div className="section">
             <Button type="nemo" color="green" text='Green Button Nemo' />
             <Button type="nemo" color="blue" text='Blue Button Nemo' />
             <Button type="one" color="red" text='Red Button One' />
             <Button type="one" color="green" text='Green Button One' />
             <Button type="one" color="blue" text='Blue Button One' />
           </div>
+          
         </li>
         <li style={liContainer}>
           <h1 style={h1Style}>Card</h1>
