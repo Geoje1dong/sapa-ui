@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {
   Button, 
   Card,
   StyledComponent,
   FlexContainer,
-  NavContainer,
 } from 'sapa-ui/dist/index';
+import Header from './Header'
 
 
 const ulContainer = {
@@ -31,19 +30,7 @@ const cardContainerStyle = {
 
 const ButtonPage = props => (
   <FlexContainer>
-    <NavContainer>
-      <div className="sapa-header__logo">
-        <Link to="/">LOGO</Link>
-      </div>
-      <div className="sapa-header__menu">
-        <div><Link to="/button">BUTTON</Link></div>
-        <div><Link to="/">MENU</Link></div>
-        <div><Link to="/">MENU</Link></div>
-        <div><Link to="/">MENU</Link></div>
-        <div><Link to="/">MENU</Link></div>
-      </div>
-      <div className="sapa-header__logo"></div>
-    </NavContainer>
+    <Header />
     <ul style={ulContainer}>
       <li style={liContainer}>
         <h1 style={h1Style}>Buttons</h1>
