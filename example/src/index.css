@@ -12,11 +12,15 @@ body {
   margin-bottom:40px;
 }
 
-.section > button{
+.section > span{
   margin:0 12px;
 }
 
-.ripple-effect-box{
+button:hover{
+  box-shadow: inset 0 -2px 0 rgba(31,45,61,.15);
+}
+
+button .ripple-effect-box{
   position:absolute;
   background: rgba(0,0,0,.15);
   border-radius: 100%;
@@ -30,14 +34,18 @@ body {
 }
 
 .primary > .ripple-effect-box{
-    background:rgba(63, 81, 181, 0.5);
+  background:rgba(63, 81, 181, 0.5);
 }
 
 .secondary > .ripple-effect-box{
-      background:rgb(255, 87, 34, 0.5)
+  background:rgb(255, 87, 34, 0.5)
 }
 .danger > .ripple-effect-box{
   background:rgba(244, 67, 54,0.5)
+}
+
+.default > button > .ripple-effect-box{
+  background: rgba(0,0,0,.15);
 }
 
 @-webkit-keyframes ripple {

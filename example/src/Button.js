@@ -4,6 +4,7 @@ import {
   Card,
   StyledComponent,
   FlexContainer,
+  Tab,
 } from 'sapa-ui/dist/index';
 import Header from './Header'
 
@@ -35,32 +36,32 @@ const ButtonPage = props => (
       <li style={liContainer}>
         <h1 style={h1Style}>Buttons</h1>
         <div className="section">
-          <Button effect="ripple" styles="default" text='Button Default' />
-          <Button effect="ripple" styles="default" color="primary" text='Button Primary' />
-          <Button effect="ripple" styles="default" color="secondary" text='Button Secondary' />
-          <Button effect="ripple" styles="default" color="danger" text='Button Danger' />
-          <Button effect="ripple" styles="default" text='Button Disabled'/>
+          <Button styles="default" text='Button Default' />
+          <Button styles="default" color="primary" text='Button Primary' />
+          <Button styles="default" color="secondary" text='Button Secondary' />
+          <Button styles="default" color="danger" text='Button Danger' />
+          <Button styles="default" text='Button Disabled'/>
         </div>
         <div className="section">
           <Button styles="textBtn" text='Button Default' />
           <Button styles="textBtn" color="primary" text='Button Primary' />
           <Button styles="textBtn" color="secondary" text='Button Secondary' />
           <Button styles="textBtn" color="danger" text='Button Danger' />
-          <Button  styles="textBtn" text='Button Disabled'/>
+          <Button styles="textBtn" text='Button Disabled'/>
         </div>
         <div className="section">
           <Button styles="outlineBtn" text='Button Default' />
           <Button styles="outlineBtn" color="primary" text='Button Primary' />
           <Button styles="outlineBtn" color="secondary" text='Button Secondary' />
           <Button styles="outlineBtn" color="danger" text='Button Danger' />
-          <Button  styles="outlineBtn" text='Button Disabled'/>
+          <Button styles="outlineBtn" text='Button Disabled'/>
         </div>
         <div className="section">
-          <Button type="nemo" color="green" text='Green Button Nemo' />
-          <Button type="nemo" color="blue" text='Blue Button Nemo' />
-          <Button type="one" color="red" text='Red Button One' />
-          <Button type="one" color="green" text='Green Button One' />
-          <Button type="one" color="blue" text='Blue Button One' />
+          <Button styles="default" type="nemo" color="default" text='Green Button Nemo' />
+          <Button styles="default" type="radius" color="primary" text='Blue Button Nemo' />
+          <Button styles="default" type="circle" color="secondary" text='+' />
+          <Button styles="default" type="extended" color="danger" text='Green Button One' />
+          <Button styles="default" type="radius" color="blue" text='Blue Button One' />
         </div>
         
       </li>

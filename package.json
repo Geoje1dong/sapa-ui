@@ -60,6 +60,7 @@
     "dist"
   ],
   "dependencies": {
+    "react-router-dom": "^5.0.0",
     "reset-css": "^4.0.1"
   }
 }

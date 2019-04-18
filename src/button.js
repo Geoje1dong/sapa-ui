@@ -22,7 +22,7 @@ const types = {
   nemo: {
     border: '1px solid'
   },
-  one: {
+  radius: {
     border: '1'
   }
 }
@@ -66,7 +66,7 @@ class Button extends React.Component {
     const currColor = colors[color]
     const style = {
       border:'1px solid',
-      boxShadow:'0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12)',
+      boxShadow:'transparent',
       padding: '16px 24px',
       fontSize: '14px',
       backgroundColor:'#f5f5f5',
@@ -80,8 +80,13 @@ class Button extends React.Component {
       ...currColor,
       
     }
-    if (type === 'one') {
+    if (type === 'radius') {
       style.borderRadius = '7px'
+    }else if(type === 'circle'){
+      style.borderRadius = '50%',
+      style.width= '51px',
+      style.lineHeight = '49px'
+      style.padding = '0'
     }
     if (styles === 'default'){
       if(color === 'primary' || color === 'secondary' || color === 'danger'){
@@ -99,7 +104,7 @@ class Button extends React.Component {
       style.boxShadow = '0'
     }
     return (
-      <button className={color} style={style} onClick={this._rippleBtn}>{text}</button>
+      <span className={styles}><button className={color} style={style} onClick={this._rippleBtn}>{text}</button></span>
     )
   }
 }

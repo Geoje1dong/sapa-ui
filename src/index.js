@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './styles.css'
 import Button from './button'
 import Card from './card'
 import StyledComponent from './styledComponent'
