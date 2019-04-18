@@ -5,6 +5,8 @@ import styles from './styles.css'
 import Button from './button'
 import Card from './card'
 import StyledComponent from './styledComponent'
+import FlexContainer from './flexContainer'
+import NavContainer from './navContainer'
 
 class ExampleComponent extends Component {
   static propTypes = {
@@ -28,5 +30,7 @@ module.exports = {
   ExampleComponent,
   Button,
   Card,
-  StyledComponent
+  StyledComponent,
+  FlexContainer,
+  NavContainer,
 }
