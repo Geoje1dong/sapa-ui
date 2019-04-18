@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ExampleComponent, Button, Card, StyledComponent } from 'sapa-ui/dist/index'
+import { Button, Card, StyledComponent, FlexContainer } from 'sapa-ui/dist/index'
 import 'reset-css';
 
 const ulContainer = {
@@ -63,14 +63,27 @@ export default class App extends Component {
           <div style={cardContainerStyle}>
             {
               [1,2,3,4,5,6,7,8,9].map(data => {
-                return <Card />
+                return <Card key={data} />
               })
             }
           </div>
         </li>
         <li style={liContainer}>
           <h1 style={h1Style}>Styled Component Example</h1>
-          <StyledComponent/>
+          <FlexContainer>
+            <StyledComponent/>
+            <StyledComponent/>
+            <StyledComponent/>
+            <StyledComponent/>
+            <StyledComponent/>
+          </FlexContainer>
+          <FlexContainer direction="column" bgColor="primary">
+            <StyledComponent/>
+            <StyledComponent/>
+            <StyledComponent/>
+            <StyledComponent/>
+            <StyledComponent/>
+          </FlexContainer>
         </li>
       </ul>
     )
