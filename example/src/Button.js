@@ -4,7 +4,8 @@ import {
   Card,
   StyledComponent,
   FlexContainer,
-  Tab,
+  Grid,
+  gridPaper,
 } from 'sapa-ui/dist/index';
 import Header from './Header'
 
@@ -91,6 +92,16 @@ const ButtonPage = props => (
           <StyledComponent/>
           <StyledComponent/>
         </FlexContainer>
+      </li>
+      <li>
+      <h1 style={h1Style}>GridLayout Example</h1>
+        <Grid bgColor="defaultbg">
+          <gridPaper/>
+        </Grid>
+        <Grid bgColor="defaultbg">
+          <gridPaper/>
+          <gridPaper/>
+        </Grid>
       </li>
     </ul>
   </FlexContainer>
