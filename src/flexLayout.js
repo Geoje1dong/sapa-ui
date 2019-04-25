@@ -96,17 +96,51 @@ const InteractiveBox = styled.div`
   }
 `
 
+
+
 /**
  * @description Layout 10가지 선택 가능한 컴포넌트
  * @property type
  */
 export default class FlexLayout extends React.Component {
+
+  _getComponentByType = (type, children) => {
+    console.log(type)
+    switch (type) {
+      case 'no-scroll':
+        return <NoScroll100PercentLayout>{children}</NoScroll100PercentLayout>
+      case 'nav':
+        return <NavLayout>{children}</NavLayout>
+      case 'footer':
+        return <FooterLayout>{children}</FooterLayout>
+      case 'menu':
+        return <DifferentOrderMenu>{children}</DifferentOrderMenu>
+      case 'center':
+        return <FormLabelVerticalCenterOrder>{children}</FormLabelVerticalCenterOrder>
+      case 'center-1':
+        return <CenterIconVer1>{children}</CenterIconVer1>
+      case 'center-2':
+        return  <CenterIconVer2>{children}</CenterIconVer2>
+      case 'dynamic':
+        return <DynamicWidthBox>{children}</DynamicWidthBox>
+      case 'text-over':
+        return <TextOverFlowBox>{children}</TextOverFlowBox>
+      case 'up-down':
+        return <UpDownFlowBox>{children}</UpDownFlowBox>
+      case 'interactive':
+        return <InteractiveBox>{children}</InteractiveBox>
+      default:
+        return <div>{children}</div>
+    }
+  }
   render() {
-    const { type } = this.props
-    const DisplayLayout = display === 'flex' ? FlexLayout : BlockLayout
+    const { type, children } = this.props
     return (
-      <DisplayLayout>
-      </DisplayLayout>
+      <React.Fragment>
+        {
+          this._getComponentByType(type, children)
+        }
+      </React.Fragment>
     )
   }
 }

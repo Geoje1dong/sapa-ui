@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlexContainer, StyledComponent } from 'sapa-ui/dist/index';
+import { FlexContainer, StyledComponent, FlexLayout } from 'sapa-ui/dist/index';
 import Header from './Header'
 
 const ulContainer = {
@@ -42,6 +42,96 @@ const LayoutPage = props => (
           <StyledComponent/>
           <StyledComponent/>
         </FlexContainer>
+      </li>
+      <li style={liContainer}>
+        <h1 style={h1Style}>No Scroll 100 Percent Layout</h1>
+        <FlexLayout type="no-scroll">
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+        </FlexLayout>
+        <h1 style={h1Style}>Nav Layout</h1>
+        <FlexLayout type="nav">
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+        </FlexLayout>
+        <h1 style={h1Style}>Footer Layout</h1>
+        <FlexLayout type="footer">
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+        </FlexLayout>
+        <h1 style={h1Style}>Different Order Menu</h1>
+        <FlexLayout type="menu">
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+        </FlexLayout>
+        <h1 style={h1Style}>Form Label Vertical Center Order</h1>
+        <FlexLayout type="center">
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+        </FlexLayout>
+        <h1 style={h1Style}>Center Icon Ver1</h1>
+        <FlexLayout type="center-1">
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+        </FlexLayout>
+        <h1 style={h1Style}>Center Icon Ver2</h1>
+        <FlexLayout type="center-2">
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+        </FlexLayout>
+        <h1 style={h1Style}>Dynamic Width Box</h1>
+        <FlexLayout type="dynamic">
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+        </FlexLayout>
+        <h1 style={h1Style}>Text Overflow Box</h1>
+        <FlexLayout type="text-over">
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+        </FlexLayout>
+        <h1 style={h1Style}>Up Down Box</h1>
+        <FlexLayout type="up-down">
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+        </FlexLayout>
+        <h1 style={h1Style}>Interactive Box</h1>
+        <FlexLayout type="interactive">
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+          <StyledComponent/>
+        </FlexLayout>
       </li>
     </ul>
   </FlexContainer>

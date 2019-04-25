@@ -8,6 +8,7 @@ import FlexContainer from './flexContainer'
 import NavContainer from './navContainer'
 import Grid from './Grid'
 import gridPaper from './gridPaper'
+import FlexLayout from './flexLayout'
 
 class ExampleComponent extends Component {
   static propTypes = {
@@ -36,4 +37,5 @@ module.exports = {
   NavContainer,
   Grid,
   gridPaper,
+  FlexLayout,
 }
