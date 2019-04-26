@@ -6,6 +6,7 @@ import HomePage from './Home'
 import ButtonPage from './Button'
 import CardPage from './Card'
 import LayoutPage from './Layout'
+import ModalPage from './Modal'
 
 export default class App extends Component {
   render () {
@@ -15,6 +16,7 @@ export default class App extends Component {
         <Route path="/button" component={ButtonPage} />
         <Route path="/card" component={CardPage} />
         <Route path="/layout" component={LayoutPage} />
+        <Route path="/modal" component={ModalPage} />
       </Switch>
     )
   }
