@@ -59,6 +59,7 @@ class Button extends React.Component {
     $rippleEffect.style.top = top + 'px';
     $rippleEffect.style.left = left + 'px';
     $rippleEffect.classList.add('show');    // show class 추가
+    this.props.onClick()
   }
 
   render() {

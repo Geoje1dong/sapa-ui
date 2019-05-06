@@ -7,6 +7,7 @@ import ButtonPage from './Button'
 import CardPage from './Card'
 import LayoutPage from './Layout'
 import ModalPage from './Modal'
+import TypographyPage from './Typography'
 
 export default class App extends Component {
   render () {
@@ -17,6 +18,7 @@ export default class App extends Component {
         <Route path="/card" component={CardPage} />
         <Route path="/layout" component={LayoutPage} />
         <Route path="/modal" component={ModalPage} />
+        <Route path="/typography" component={TypographyPage} />
       </Switch>
     )
   }

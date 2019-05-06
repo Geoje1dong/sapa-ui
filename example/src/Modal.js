@@ -18,34 +18,35 @@ const h1Style = {
   margin: '1em'
 }
 
-const state = {
-  isOpen: false,
-  type: ''
-}
 
-const ModalPage = props => (
-  <FlexContainer>
-    <Header />
-    <Modal>
-      <div>
-        <h1>Modal Test</h1>
-      </div>
-      <div>
-        <Button styles="default" text="Modal" />
-      </div>
-    </Modal>
-    <ul style={ulContainer}>
-      <li style={liContainer}>
-        <h1 style={h1Style}>Default Modal</h1>
-        <div className="section">
-          <Button styles="default" color="primary" text='Modal 1' />
-          <Button styles="default" color="primary" text='Modal 2' />
-          <Button styles="default" color="primary" text='Modal 3' />
-          <Button styles="default" color="primary" text='Modal 4' />
+const ModalPage = props => {
+
+  const [isOpen, setIsOpen] = React.useState(false)
+  
+  return (
+    <FlexContainer>
+      <Header />
+      <Modal isOpen={isOpen} onClickBackdrop={() => setIsOpen(false)}>
+        <div>
+          <h1>Modal Test</h1>
         </div>
-      </li>
-    </ul>
-  </FlexContainer>
-)
+        <div>
+          <Button styles="default" text="Modal" onClick={() => setIsOpen(false)} />
+        </div>
+      </Modal>
+      <ul style={ulContainer}>
+        <li style={liContainer}>
+          <h1 style={h1Style}>Default Modal</h1>
+          <div className="section">
+            <Button styles="default" color="primary" text='Modal 1' onClick={() => setIsOpen(true)} />
+            <Button styles="default" color="primary" text='Modal 2' onClick={() => setIsOpen(true)} />
+            <Button styles="default" color="primary" text='Modal 3' onClick={() => setIsOpen(true)} />
+            <Button styles="default" color="primary" text='Modal 4' onClick={() => setIsOpen(true)} />
+          </div>
+        </li>
+      </ul>
+    </FlexContainer>
+  )
+}
 
 export default ModalPage

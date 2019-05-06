@@ -12,7 +12,7 @@ const Header = props => (
       <div><Link to="/card">CARD</Link></div>
       <div><Link to="/layout">LAYOUT</Link></div>
       <div><Link to="/modal">MODAL</Link></div>
-      <div><Link to="/">MENU</Link></div>
+      <div><Link to="/typography">TYPOGRAPHY</Link></div>
     </div>
     <div className="sapa-header__logo"></div>
   </NavContainer>

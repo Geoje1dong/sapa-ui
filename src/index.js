@@ -10,6 +10,7 @@ import Grid from "./grid";
 import gridPaper from "./gridPaper";
 import FlexLayout from "./flexLayout";
 import Modal from "./modal";
+import Typography from './typography';
 
 class ExampleComponent extends Component {
   static propTypes = {
@@ -33,5 +34,6 @@ module.exports = {
   Grid,
   gridPaper,
   FlexLayout,
-  Modal
+  Modal,
+  Typography
 };

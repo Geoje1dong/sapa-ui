@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ModalContainer = styled.div`
+  display: ${props => props.isOpen ? 'block' : 'none'}
 `
 
 const ModalBackdrop = styled.div`
@@ -51,9 +52,10 @@ const ModalContent = styled.div`
 
 class Modal extends React.Component {
   render() {
+    const { isOpen } = this.props
     return (
-      <ModalContainer>
-        <ModalBackdrop />
+      <ModalContainer isOpen={isOpen}>
+        <ModalBackdrop onClick={this.props.onClickBackdrop} />
         <ModalContentBox>
           <ModalDialog>
             <ModalContent>

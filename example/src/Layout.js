@@ -17,11 +17,6 @@ const h1Style = {
   margin: '1em'
 }
 
-const cardContainerStyle = {
-  display: 'flex',
-  flexWrap: 'wrap'
-}
-
 const LayoutPage = props => (
   <FlexContainer>
     <Header />
